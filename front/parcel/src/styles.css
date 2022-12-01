@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.title{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+input, select{
+    border: none;
+    border-radius: 16px;
+    padding: 10px 33px;
+    background-color: lightgray;
+    color: gray;
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+button{
+    display: inline-flex;
+    min-width: 140px;
+    justify-content: center;
+    background-color: #FF6B6B;
+    color: white;
+    padding: .8em;
+    font-size: 1.25em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}

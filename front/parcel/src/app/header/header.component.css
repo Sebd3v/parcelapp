@@ -1,0 +1,56 @@
+.header{
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+}
+.logo{
+    font-weight: bold;
+    font-size: 2em;
+    cursor: pointer;
+}
+.buscador{
+    width: 40%;
+}
+.usuario img{
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  border: 1px solid;
+  cursor: pointer
+}
+
+/* Style the search field */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-right: none; /* Prevent double borders */
+    float: left;
+    width: 90%;
+    background: white;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

@@ -1,0 +1,65 @@
+<div *ngIf="showform else factura">
+    <div class="title">¿Nuevo paquete? ¡Para eso estamos!</div>
+    <form [formGroup]="enviar" (ngSubmit)="sendInfo()">
+        <div class="form-container">
+            <div class="form">
+                <div class="title">Informacion remitente</div>
+                <div class="row">
+                    <input required placeholder="Nombre" type="text" formControlName="user1name">
+                    <input required placeholder="Apellido" type="text" formControlName="user1lastname">
+                </div>
+                <div>
+                    <input required placeholder="Direccion completa" type="text" formControlName="user1address">
+                </div>
+                <div>
+                    <input required placeholder="Numero de documento" type="text" formControlName="user1id">
+                </div>
+                
+                <div class="title">Informacion de quien recibe</div>
+                
+                <div class="row">
+                    <input required placeholder="Nombre" type="text" formControlName="user2name">
+                    <input required placeholder="Apellido" type="text" formControlName="user2lastname">
+                </div>
+                <div>
+                    <input required placeholder="Direccion completa" type="text" formControlName="user2address">
+                </div>
+                <div>
+                    <input required placeholder="Numero de documento" type="text" formControlName="user2id">
+                </div>
+            </div>
+            <div class="form">
+                <div class="title">Informacion del paquete</div>
+                
+                <label>Tipo de Paquete</label>
+                <select placeholder="Tipo de paquete" formControlName="tipo"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                
+                <div style="display: flex; gap: 1em;">
+                    <input required placeholder="Alto(cm)" type="number" formControlName="alto">
+                    <input required placeholder="Largo(cm)" type="number" formControlName="largo">
+                    <input required placeholder="Ancho(cm)" type="number" formControlName="ancho">
+                </div>
+                <input required placeholder="Peso minimo 3kg" type="number" formControlName="peso">
+            </div>
+            
+            
+        </div>
+        <div style="text-align: center;">
+            <button class="primary">Cancelar</button>
+            <button class="secondary" type="submit">Pagar</button>
+        </div>
+    </form>
+</div>
+ <ng-template #factura>
+    <div style="text-align: center;">
+    
+        <div class="title">Nueva Factura</div>
+        <div lass="title"> Nombre: {{enviar.value.user1name}}</div>
+    </div>
+    
+
+ </ng-template>
